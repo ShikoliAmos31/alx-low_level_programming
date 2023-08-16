@@ -1,14 +1,22 @@
-#include "main.h"
+i#include "main.h"
+#include <stdio.h>
 
 /**
-* _abs - program that finds the absolute value of an integer
-* @a: parameter for finding an integer
-* Return: absolute value of a
-*/
-int _abs(int a)
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-if (a < 0)
-return -a;
+    int r;
 
-return a;
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
 }
