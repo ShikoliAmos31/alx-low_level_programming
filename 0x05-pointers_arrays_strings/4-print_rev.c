@@ -1,7 +1,7 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
-* print_rev - program that prints string in reverse
+* print_rev -program that prints string in reverse
 * @s: string to be printed
 *
 * Return: void
