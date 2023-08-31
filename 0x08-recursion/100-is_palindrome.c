@@ -32,6 +32,7 @@ return (0 + compare_string(s, left + 1, right - 1));
 }
 return (0);
 }
+
 /**
 * is_palindrome -function that detects if the string is palindrome
 * @s: string to be tested
