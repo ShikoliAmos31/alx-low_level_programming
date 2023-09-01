@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main -programme that prints number of arguments
+* main -program that prints all arguments
 * @argc: argument count
 * @argv: argument vector
 * Return: 0
@@ -9,8 +9,10 @@
 
 int main(int argc, char *argv[])
 {
-(void)argv;
+int i;
 
-printf("%d/n",argc - 1);
+(void)argv;
+for (i = 0; i < argc; i++)
+printf("%s\n", argv[i]);
 return (0);
 }
