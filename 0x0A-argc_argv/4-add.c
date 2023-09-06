@@ -4,15 +4,19 @@
 #include <string.h>
 
 /**
-* check_num - Check if a string contains only digits.
-* @str: String to check
+* check_num - check - string there are digit
+* @str: array str
 *
-* Return: 1 if all characters are digits, 0 otherwise.
+* Return: Always 0 (Success)
 */
+
 int check_num(char *str)
 {
-int count = 0;
-while (str[count] != '\0')
+
+unsigned int count;
+
+count = 0;
+while (count < strlen(str))
 {
 if (!isdigit(str[count]))
 {
@@ -23,17 +27,23 @@ count++;
 return (1);
 }
 
+/**
+* main - Print the name of the program
+* @argc: Count arguments
+* @argv: Arguments
+*
+* Return: Always 0 (Success)
+*/
+
 int main(int argc, char *argv[])
+
 {
+
 int count;
 int str_to_int;
 int sum = 0;
-if (argc < 2)
-{
-printf("Usage: %s num1 num2 num3 ...\n", argv[0]);
-return (1);
-}
-for (count = 1; count < argc; count++)
+count = 1;
+while (count < argc)
 {
 if (check_num(argv[count]))
 {
@@ -42,10 +52,13 @@ sum += str_to_int;
 }
 else
 {
-printf("Error: %s is not a valid number\n", argv[count]);
+printf("Error\n");
 return (1);
 }
+
+count++;
 }
-printf("Sum: %d\n", sum);
+
+printf("%d\n", sum);
 return (0);
 }
