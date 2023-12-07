@@ -5,14 +5,13 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *current, *next_node;
-
 	if (head == NULL)
-		return;
-	while (current != NULL)
+	return;
+
+	while (head->next)
 	{
-		next_node = current->next;
-		free(current);
-		current = next_node;
+	head = head->next;
+	free(head->prev);
 	}
+	free(head);
 }
