@@ -16,7 +16,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (new_table == NULL)
 		return (NULL);
-
 	/* Allocate memory for the array of pointers */
 	new_table->array = malloc(sizeof(hash_node_t *) * size);
 
@@ -32,5 +31,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	/* Set the size of the array */
 	new_table->size = size;
+
 	return (new_table);
 }
